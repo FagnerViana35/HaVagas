@@ -35,7 +35,7 @@
                 android:layout_marginTop="4sp"/>
 
             <CheckBox
-                android:id="@+id/checkEmail"
+                android:id="@+id/ckEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ckEmails"
@@ -74,6 +74,12 @@
             </RadioGroup>
         </LinearLayout>
 
+        <CheckBox
+            android:id="@+id/ckTelCel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addTelCel" />
+
         <LinearLayout
             android:id="@+id/llTelCelEt"
             android:layout_width="match_parent"
@@ -82,18 +88,14 @@
             android:layout_marginTop="4sp"
             android:visibility="gone">
             <EditText
-                android:id="@+id/TelCelEt"
+                android:id="@+id/telCelEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:hint="@string/telCel"/>
         </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/ckTelCel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/addTelCel" />
+
 
         <TextView
             android:layout_width="match_parent"
@@ -129,7 +131,7 @@
             android:textSize="18sp"
             android:layout_marginTop="3sp"/>
         <EditText
-            android:id="@+id/inptDataNasc"
+            android:id="@+id/dataNascEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date"
@@ -144,7 +146,7 @@
             android:textSize="18sp"
             android:layout_marginTop="3sp"/>
         <Spinner
-            android:id="@+id/inptFormacao"
+            android:id="@+id/formacaoEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/formacao" />
@@ -184,7 +186,7 @@
                 android:textSize="18sp"
                 android:layout_marginTop="4sp" />
             <EditText
-                android:id="@+id/inptAnoConclGradEsp"
+                android:id="@+id/anoConclGradEspEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
@@ -192,7 +194,7 @@
 
 
             <EditText
-                android:id="@+id/inptInstGradEspec"
+                android:id="@+id/instGradEspecEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -215,14 +217,14 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/anoConclusaoMestrDout"
+                android:id="@+id/anoConclMestrDout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:hint="@string/ano_de_formatura"/>
 
             <EditText
-                android:id="@+id/inptInstituicaoMestrDout"
+                android:id="@+id/instMestrDoutEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -247,7 +249,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/inptVagasInteresse"
+            android:id="@+id/vagasInteresseEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"

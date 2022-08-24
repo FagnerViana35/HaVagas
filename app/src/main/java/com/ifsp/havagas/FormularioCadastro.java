@@ -192,7 +192,38 @@ public class FormularioCadastro {
         this.vagasInteresse = vagasInteresse;
     }
 
-    @Override
+
+    public String toStringGraducaoEspecializacao() {
+        return "FormularioCadastro{" +
+                "opcaoTelefone='" + opcaoTelefone + '\'' +
+                ", numeroCelular='" + numeroCelular + '\'' +
+                ", nomeCompleto='" + nomeCompleto + '\'' +
+                ", email='" + email + '\'' +
+                ", receberEmails=" + receberEmails +
+                ", numeroTelefone='" + numeroTelefone + '\'' +
+                ", sexoPessoa='" + sexoPessoa + '\'' +
+                ", data='" + data + '\'' +
+                ", formacao='" + formacao + '\'' +
+                ", vagasInteresse='" + vagasInteresse + '\'' +
+                '}';
+    }
+
+    public String toStringFundamentalMedio() {
+        return "FormularioCadastro{" +
+                "opcaoTelefone='" + opcaoTelefone + '\'' +
+                ", numeroCelular='" + numeroCelular + '\'' +
+                ", nomeCompleto='" + nomeCompleto + '\'' +
+                ", email='" + email + '\'' +
+                ", receberEmails=" + receberEmails +
+                ", numeroTelefone='" + numeroTelefone + '\'' +
+                ", sexoPessoa='" + sexoPessoa + '\'' +
+                ", data='" + data + '\'' +
+                ", anoFormatura='" + anoFormatura + '\'' +
+                ", formacao='" + formacao + '\'' +
+                ", vagasInteresse='" + vagasInteresse + '\'' +
+                '}';
+    }
+
     public String toString() {
         return "FormularioCadastro{" +
                 "opcaoTelefone='" + opcaoTelefone + '\'' +
