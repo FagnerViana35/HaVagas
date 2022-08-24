@@ -22,7 +22,7 @@ public class FormularioCadastro {
     }
 
     public FormularioCadastro(String nome, String email, Boolean receberEmails, String numeroTelefone, String opcaoTelefone, String numeroCelular, String sexoPessoa, String data, String formacao, String vagasInteresse,
-                              String anoForatura) {
+                              String anoFormatura) {
         this.nomeCompleto = nome;
         this.email = email;
         this.receberEmails = receberEmails;
@@ -33,7 +33,7 @@ public class FormularioCadastro {
         this.data = data;
         this.formacao = formacao;
         this.vagasInteresse = vagasInteresse;
-        this.anoFormatura = anoForatura;
+        this.anoFormatura = anoFormatura;
     }
 
     public FormularioCadastro(String nome, String email, Boolean receberEmails, String numeroTelefone, String opcaoTelefone, String numeroCelular, String sexoPessoa, String data, String formacao, String vagasInteresse,
