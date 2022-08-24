@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">HaVagas</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="email">E-mail</string>
+    <string name="ckEmails" />
+
+    <string name="telefone">Telefone: (XX) 1111-0000</string>
+    <string name="comercial">Telefone Comercial</string>
+    <string name="residencial">Telefone Residencial</string>
+
+    <string name="telCel">Celular: (XX) 91111-0000</string>
+    <string name="addTelCel">Adicionar Telefone Celular</string>
+
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculno</string>
+    <string name="feminino">Feminino</string>
+
+    <string name="dtNascimento">Data de Nascimento</string>
+    <string name="formacao">Formação</string>
+    <string name="txtAnoFormatura">Ano de Formatura</string>
+    <string name="anoFormatura">Digite o ano de formatura</string>
+    <string name="txtConclusao">Ano de Conclusão</string>
+    <string name="escola">Nome da Instituição</string>
+    <string name="titulo_monografia">Título de Monografia</string>
+    <string name="orientador">Nome do Orientador</string>
+    <string name="ano_de_formatura">Ano da Formatura</string>
+    <string name="txtAnoConclusao">Ano de Conclusão do Curso</string>
+    <string name="instituicao">Nome da instituição</string>
+
+    <string name="vagasInteresse">Vagas de Interesse</string>
+    <!--Botões-->
+    <string name="Btlimpar">Limpar</string>
+    <string name="Btsalvar">Salvar</string>
+
+    <string-array name="formacao">
+        <item>Ensino Fundamental</item>
+        <item>Ensino Médio</item>
+        <item>Graduação</item>
+        <item>Especialização</item>
+        <item>Mestrado</item>
+        <item>Doutorado</item>
+        <item>MBA</item>
+        <item>Licenciatura</item>
+        <item>Curso Técnico</item>
+        <item>Tecnologo</item>
+        <item>Pos Doutorado</item>
+    </string-array>
 </resources>
