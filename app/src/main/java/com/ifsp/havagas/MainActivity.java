@@ -229,7 +229,6 @@ public class MainActivity extends AppCompatActivity {
         Log.v(LOG_CYCLE_RECOVERY, "onRestoreInstanceState: Restoring cycle data");
     }
 
-    //etapas do ciclo para visualização no console
     @Override
     protected void onStart() {
         super.onStart();
