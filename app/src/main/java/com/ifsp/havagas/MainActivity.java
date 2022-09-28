@@ -14,6 +14,8 @@ import com.ifsp.havagas.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding amb;
 
+    private final String  CYCLE_RECOVERY= "CYCLE_RECOVERY";
+
     private String nome;
     private  String email;
     private Boolean addEmails;
@@ -35,20 +37,21 @@ public class MainActivity extends AppCompatActivity {
     private static final String EMAIL = "email";
     private static final String TELEFONE = "33071465";
     private static final String DATA= "28/06/2022";
-    private static final String VAGASINTERESSE = "dESENVOLVEDOR";
-    private static final String ANOFORMATURA = "email@email.com";
-    private static final String TITULOMONOGRAFIA= "sim";
+    private static final String VAGAS_INTERESSE = "Desenvolvedor";
+    private static final String ANO_FORMATURA_ENSINO_MEDIO = "20/06/2005";
+    private static final String TITULO_MONOGRAFIA= "sim";
     private static final String ORIENTADOR = "Tem orientador";
     private static final String CELULAR= "994152898";
     private static final String CKEMAIL = "true";
-    private static final String TELRESIDENCIAL = "33071458";
-    private static final String TELCOMERCIAL= "28/06/2022";
-    private static final String SEXOMASC= "email";
-    private static final String SEXOFEM= "email";
-    private static final String ANOCONCLUSAOGRAD= "email";
-    private static final String ANOCONCLUSAOMESTDOUT= "email";
-    private static final String iNSTMESTRDOUT= "email";
-    private static final String INSTGRADESPECET= "email";
+    private static final String TEL_RESIDENCIAL = "34165898";
+    private static final String TEL_COMERCIAL= "33071468";
+    private static final String SEXO_MASC= "sexo Masculino";
+    private static final String SEXO_FEM= "Sexo Feminino";
+    private static final String ANO_CONCLUSAO_GRAD= "Ano de Conclusão da Gaduação";
+    private static final String ANO_CONCLUSAO_MEST_DOUT= "Ano de Conclusão do Mestrado";
+    private static final String INST_MESTR_DOUT= "Instituição de Doutorado";
+    private static final String INST_GRAD_ESPEC= "Instituição de Especialização";
+    private static final String CK_EMAIL= "email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -166,24 +169,100 @@ public class MainActivity extends AppCompatActivity {
         outState.putString(EMAIL, amb.emailEt.getText().toString());
         outState.putString(TELEFONE, amb.telefoneEt.getText().toString());
         outState.putString(CELULAR, amb.telCelEt.getText().toString());
+        outState.putBoolean(TEL_RESIDENCIAL, amb.rTelResidencial.isChecked());
+        outState.putBoolean(TEL_COMERCIAL, amb.rTelComercial.isChecked());
         outState.putString(DATA, amb.dataNascEt.getText().toString());
-        outState.putString(VAGASINTERESSE, amb.vagasInteresseEt.getText().toString());
-        outState.putString(ANOFORMATURA, amb.anoFormFundMedio.getText().toString());
-        outState.putString(TITULOMONOGRAFIA, amb.monografiaEt.getText().toString());
-        outState.putString(ORIENTADOR, amb.orientadorEt.getText().toString());
-        outState.putBoolean(CKEMAIL, amb.ckEmail.isChecked());
-        outState.putBoolean(TELRESIDENCIAL, amb.rTelResidencial.isChecked());
-        outState.putBoolean(TELCOMERCIAL, amb.rTelComercial.isChecked());
-        outState.putBoolean(SEXOMASC, amb.sxMasc.isChecked());
-        outState.putBoolean(SEXOFEM, amb.sxFem.isChecked());
-        outState.putString(ANOCONCLUSAOGRAD, amb.anoConclGradEspEt.getText().toString());
-        outState.putString(ANOCONCLUSAOMESTDOUT, amb.anoConclMestrDout.getText().toString());
-        outState.putString(iNSTMESTRDOUT, amb.instMestrDoutEt.getText().toString());
-        outState.putString(INSTGRADESPECET, amb.instGradEspecEt.getText().toString());
 
+        outState.putString(VAGAS_INTERESSE, amb.vagasInteresseEt.getText().toString());
+
+        outState.putString(TITULO_MONOGRAFIA, amb.monografiaEt.getText().toString());
+        outState.putString(ORIENTADOR, amb.orientadorEt.getText().toString());
+
+        outState.putBoolean(CKEMAIL, amb.ckEmail.isChecked());
+
+        outState.putBoolean(SEXO_MASC, amb.sxMasc.isChecked());
+        outState.putBoolean(SEXO_FEM, amb.sxFem.isChecked());
+
+        outState.putString(ANO_FORMATURA_ENSINO_MEDIO, amb.anoFormFundMedio.getText().toString());
+        outState.putString(ANO_CONCLUSAO_GRAD, amb.anoConclGradEspEt.getText().toString());
+        outState.putString(ANO_CONCLUSAO_MEST_DOUT, amb.anoConclMestrDout.getText().toString());
+
+        outState.putString(INST_MESTR_DOUT, amb.instMestrDoutEt.getText().toString());
+        outState.putString(INST_GRAD_ESPEC, amb.instGradEspecEt.getText().toString());
 
 
         Log.v("Recuperação no onSaveInstanceState", "Dados salvos no Bundle outState");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        amb.nomeEt.setText(savedInstanceState.getString(NOME));
+        amb.emailEt.setText(savedInstanceState.getString(EMAIL));
+        amb.telefoneEt.setText(savedInstanceState.getString(TELEFONE));
+        amb.rTelResidencial.setChecked(savedInstanceState.getBoolean((TEL_RESIDENCIAL)));
+        amb.rTelComercial.setChecked(savedInstanceState.getBoolean((TEL_COMERCIAL)));
+
+        amb.ckTelCel.setText(savedInstanceState.getString(CELULAR));
+
+        amb.sxMasc.setChecked(savedInstanceState.getBoolean(SEXO_MASC));
+        amb.sxFem.setChecked(savedInstanceState.getBoolean(SEXO_FEM));
+
+        amb.dataNascEt.setText(savedInstanceState.getString(DATA));
+
+        amb.vagasInteresseEt.setText(savedInstanceState.getString(VAGAS_INTERESSE));
+
+        amb.anoConclMestrDout.setText(savedInstanceState.getString(ANO_CONCLUSAO_MEST_DOUT));
+        amb.anoFormFundMedio.setText(savedInstanceState.getString(ANO_FORMATURA_ENSINO_MEDIO));
+        amb.anoConclGradEspEt.setText(savedInstanceState.getString(ANO_CONCLUSAO_GRAD));
+
+        amb.instMestrDoutEt.setText(savedInstanceState.getString(INST_MESTR_DOUT));
+        amb.instGradEspecEt.setText(savedInstanceState.getString(INST_GRAD_ESPEC));
+
+        amb.monografiaEt.setText(savedInstanceState.getString(TITULO_MONOGRAFIA));
+        amb.orientadorEt.setText(savedInstanceState.getString(ORIENTADOR));
+        amb.ckEmail.setChecked(savedInstanceState.getBoolean(CK_EMAIL));
+
+
+        Log.v(CYCLE_RECOVERY, "onRestoreInstanceState: restaurando dados do ciclo PDM");
+    }
+
+    //etapas do ciclo para visualização no console
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v(CYCLE_RECOVERY, "onStart: iniciando cliclo visivel");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.v(CYCLE_RECOVERY, "onResume: iniciando cliclo foreground");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.v(CYCLE_RECOVERY, "onPause: finalizando ciclo foreground");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.v(CYCLE_RECOVERY, "onStop: finalizando ciclo visivel");
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.v(CYCLE_RECOVERY, "onRestar: iniciando chamada para ciclo visivel");
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.v(CYCLE_RECOVERY, "onDestroy: finalizando ciclo/aplicacao");
     }
 
 
