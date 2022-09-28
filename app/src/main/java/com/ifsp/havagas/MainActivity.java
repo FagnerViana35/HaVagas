@@ -31,6 +31,25 @@ public class MainActivity extends AppCompatActivity {
     private String orientador;
     private FormularioCadastro formularioCadastro;
 
+    private static final String NOME = "nome";
+    private static final String EMAIL = "email";
+    private static final String TELEFONE = "33071465";
+    private static final String DATA= "28/06/2022";
+    private static final String VAGASINTERESSE = "dESENVOLVEDOR";
+    private static final String ANOFORMATURA = "email@email.com";
+    private static final String TITULOMONOGRAFIA= "sim";
+    private static final String ORIENTADOR = "Tem orientador";
+    private static final String CELULAR= "994152898";
+    private static final String CKEMAIL = "true";
+    private static final String TELRESIDENCIAL = "33071458";
+    private static final String TELCOMERCIAL= "28/06/2022";
+    private static final String SEXOMASC= "email";
+    private static final String SEXOFEM= "email";
+    private static final String ANOCONCLUSAOGRAD= "email";
+    private static final String ANOCONCLUSAOMESTDOUT= "email";
+    private static final String iNSTMESTRDOUT= "email";
+    private static final String INSTGRADESPECET= "email";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,15 +162,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        outState.putString("nome", amb.nomeEt.getText().toString());
-        outState.putString("email", amb.emailEt.getText().toString());
-        outState.putString("telefone", amb.telefoneEt.getText().toString());
-        outState.putString("celular", amb.telCelEt.getText().toString());
-        outState.putString("data", amb.dataNascEt.getText().toString());
-        outState.putString("vagasInteresse", amb.vagasInteresseEt.getText().toString());
-        outState.putString("anoFormatura", amb.anoFormFundMedio.getText().toString());
-        outState.putString("tituloMonografia", amb.monografiaEt.getText().toString());
-        outState.putString("orientador", amb.orientadorEt.getText().toString());
+        outState.putString(NOME, amb.nomeEt.getText().toString());
+        outState.putString(EMAIL, amb.emailEt.getText().toString());
+        outState.putString(TELEFONE, amb.telefoneEt.getText().toString());
+        outState.putString(CELULAR, amb.telCelEt.getText().toString());
+        outState.putString(DATA, amb.dataNascEt.getText().toString());
+        outState.putString(VAGASINTERESSE, amb.vagasInteresseEt.getText().toString());
+        outState.putString(ANOFORMATURA, amb.anoFormFundMedio.getText().toString());
+        outState.putString(TITULOMONOGRAFIA, amb.monografiaEt.getText().toString());
+        outState.putString(ORIENTADOR, amb.orientadorEt.getText().toString());
+        outState.putBoolean(CKEMAIL, amb.ckEmail.isChecked());
+        outState.putBoolean(TELRESIDENCIAL, amb.rTelResidencial.isChecked());
+        outState.putBoolean(TELCOMERCIAL, amb.rTelComercial.isChecked());
+        outState.putBoolean(SEXOMASC, amb.sxMasc.isChecked());
+        outState.putBoolean(SEXOFEM, amb.sxFem.isChecked());
+        outState.putString(ANOCONCLUSAOGRAD, amb.anoConclGradEspEt.getText().toString());
+        outState.putString(ANOCONCLUSAOMESTDOUT, amb.anoConclMestrDout.getText().toString());
+        outState.putString(iNSTMESTRDOUT, amb.instMestrDoutEt.getText().toString());
+        outState.putString(INSTGRADESPECET, amb.instGradEspecEt.getText().toString());
+
+
 
         Log.v("Recuperação no onSaveInstanceState", "Dados salvos no Bundle outState");
     }
