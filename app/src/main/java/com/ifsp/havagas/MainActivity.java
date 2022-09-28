@@ -14,7 +14,7 @@ import com.ifsp.havagas.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding amb;
 
-    private final String  CYCLE_RECOVERY= "CYCLE_RECOVERY";
+
 
     private String nome;
     private  String email;
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private String orientador;
     private FormularioCadastro formularioCadastro;
 
+    private static final String  LOG_CYCLE_RECOVERY= "LOG_CYCLE_RECOVERY";
     private static final String NOME = "nome";
     private static final String EMAIL = "email";
     private static final String TELEFONE = "33071465";
@@ -191,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putString(INST_GRAD_ESPEC, amb.instGradEspecEt.getText().toString());
 
 
-        Log.v("Recuperação no onSaveInstanceState", "Dados salvos no Bundle outState");
+        Log.v(LOG_CYCLE_RECOVERY, "Recuperação no onSaveInstanceState: Dados salvos no Bundle outState!");
     }
 
     @Override
@@ -225,44 +226,45 @@ public class MainActivity extends AppCompatActivity {
         amb.ckEmail.setChecked(savedInstanceState.getBoolean(CK_EMAIL));
 
 
-        Log.v(CYCLE_RECOVERY, "onRestoreInstanceState: restaurando dados do ciclo PDM");
+        Log.v(LOG_CYCLE_RECOVERY, "onRestoreInstanceState: Restoring cycle data");
     }
 
     //etapas do ciclo para visualização no console
     @Override
     protected void onStart() {
         super.onStart();
-        Log.v(CYCLE_RECOVERY, "onStart: iniciando cliclo visivel");
+        Log.v(LOG_CYCLE_RECOVERY, "onStart: Starting visible cycle");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.v(CYCLE_RECOVERY, "onResume: iniciando cliclo foreground");
+        Log.v(LOG_CYCLE_RECOVERY, "onResume: Starting foreground cycle");
     }
 
     @Override
     protected void onPause(){
         super.onPause();
-        Log.v(CYCLE_RECOVERY, "onPause: finalizando ciclo foreground");
+        Log.v(LOG_CYCLE_RECOVERY, "onPause: Ending foreground cycle");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.v(CYCLE_RECOVERY, "onStop: finalizando ciclo visivel");
+        Log.v(LOG_CYCLE_RECOVERY, "onStop: Ending visible cycle");
     }
 
     @Override
     protected void onRestart(){
         super.onRestart();
-        Log.v(CYCLE_RECOVERY, "onRestar: iniciando chamada para ciclo visivel");
+        Log.v(LOG_CYCLE_RECOVERY, "onRestar: \n" +
+                "Initiating call to visible cycle");
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Log.v(CYCLE_RECOVERY, "onDestroy: finalizando ciclo/aplicacao");
+        Log.v(LOG_CYCLE_RECOVERY, "onDestroy: Ending cycle/application");
     }
 
 
