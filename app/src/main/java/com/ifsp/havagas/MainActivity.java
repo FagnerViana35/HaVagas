@@ -2,7 +2,9 @@ package com.ifsp.havagas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -135,4 +137,24 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    @SuppressLint("LongLogTag")
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString("nome", amb.nomeEt.getText().toString());
+        outState.putString("email", amb.emailEt.getText().toString());
+        outState.putString("telefone", amb.telefoneEt.getText().toString());
+        outState.putString("celular", amb.telCelEt.getText().toString());
+        outState.putString("data", amb.dataNascEt.getText().toString());
+        outState.putString("vagasInteresse", amb.vagasInteresseEt.getText().toString());
+        outState.putString("anoFormatura", amb.anoFormFundMedio.getText().toString());
+        outState.putString("tituloMonografia", amb.monografiaEt.getText().toString());
+        outState.putString("orientador", amb.orientadorEt.getText().toString());
+
+        Log.v("Recuperação no onSaveInstanceState", "Dados salvos no Bundle outState");
+    }
+
+
 }
